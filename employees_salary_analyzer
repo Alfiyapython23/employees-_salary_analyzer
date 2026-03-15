@@ -1,0 +1,21 @@
+file=open ("emulated.csv","r")
+lines=file.readlines()
+file.close()
+
+employees=()
+total _salary=0
+
+for line in lines [1:]:
+    data=line.strip().split(",")
+    name = data[0]
+    department = data[1]
+    salary = int (data [2])
+
+    employees.append[(name, department, salary)]
+    total_salary+=salary 
+
+    print("Total Employees:",len(employees))
+    print ("Total Salary:", total _salary)
+    highest = max (employees,key = lambda x:x[2])
+    print ("Highest Salary :", highest [0], highest [2])
+    
